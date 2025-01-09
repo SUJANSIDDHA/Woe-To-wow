@@ -1,0 +1,694 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* CSS Variables */
+:root {
+  --primary-color: #800000;
+  --secondary-color: #FFD7BA;
+  --accent-color: #FEC89A;
+  --background-light: #FAE1DD;
+  --background-dark: #333;
+  --hover-color: #D473AF;
+}
+
+/* Body */
+body {
+  background-color: var(--background-light);
+  color: black; /* Set text color to black */
+  line-height: 1.6;
+  font-size: 18px; /* Slightly increase the font size */
+}
+
+/* Heading Styling */
+h1, h2, h3, h4, h5, h6 {
+  color: #c9641d; /* Set heading color to #c9641d */
+}
+
+/* Navigation */
+nav {
+    background: #ffcccc; /* Set the navigation bar color */
+    color: #fff;
+    padding: 10px;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 10px; /* Adjust margin for spacing */
+    padding: 10px 20px;
+    background-color: #fff2cc; /* Set the button color */
+    color: black; /* Set text color to black */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background-color: #4a148c; /* Optional: Change hover color */
+    transform: translateY(-5px);
+}
+
+
+
+/* Sections */
+section {
+  padding: 50px;
+  margin: 20px 0;
+}
+
+section:nth-child(odd) {
+  background: #f4f4f4;
+}
+
+section:nth-child(even) {
+  background: #e2e2e2;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background-image: url("https://i.postimg.cc/9XsQpWkK/Mar20-18-1159576454-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 400px 200px;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.hero-logo {
+    position: absolute;
+    top: 20px; /* Adjust top position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 350px; /* Adjust size as needed */
+}
+/* Logo Hover Animation */
+.hero-logo {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hero-logo:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+.hero-text {
+    margin-top: 100px; /* Adjust margin to position text below the logo */
+    text-align: right;
+    max-width: 600px; /* Adjust width as needed */
+    align-self: flex-end; /* Align text to the top right */
+}
+.hero-buttons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.hero-buttons .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.hero-section .arrow {
+    display: none; /* Hide the arrow */
+}
+
+.hero-buttons .btn:hover {
+  background-color: #4a148c;
+  transform: translateY(-5px);
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  gap: 30px;
+}
+
+.social-icons .icon img {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s;
+}
+
+.social-icons .icon:hover img {
+  transform: scale(1.2);
+}
+
+/* Services Section */
+.services {
+    background-color: #FFE5D9;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.service-box {
+    background-color: #ffb3b3; /* Change to your desired color */
+    padding: 90px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.service-box:hover {
+    transform: scale(1.06);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    max-width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 15px;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+}
+
+.card p {
+    margin-bottom: 20px;
+}
+
+.card .btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.card .btn:hover {
+    background-color: #4a148c;
+}
+
+/* Video Section */
+.video {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.video h2 {
+    color: var(--primary-color); /* Use your primary color for the heading */
+    font-size: 2rem; /* Set a larger font size for the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+.video-box {
+    background-color: #ccccff; /* Change to your desired color */
+    padding: 100px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.video iframe {
+    width: 100%;
+    max-width: 800px; /* Limit the maximum width */
+    height: 450px; /* Set a fixed height */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Add rounded corners to the video */
+}
+
+.video p {
+    color: var(--primary-color); /* Use your primary color for the text */
+    margin-top: 20px; /* Add space above the text */
+    font-size: 1.1rem; /* Slightly increase the font size */
+}
+.video-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Team Section */
+.team {
+  background-color: #ffbf80;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #333;
+  font-weight: 700;
+}
+
+.team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.center-member {
+  text-align: center;
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+
+.center-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #d3d3d3;
+}
+
+.team-group {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+.team-member {
+  background:  #ffe6cc;
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 200px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.team-box {
+    background-color: #ffecb3;
+    padding: 100px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 30px;
+    animation: slideIn 1s ease-in-out;
+}
+.team-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #d3d3d3;
+}
+
+.team-member h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Slide In Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Contact Form Section */
+.contact {
+  background-color: var(--background-light);
+  text-align: center;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.contact form input,
+.contact form textarea {
+  background-color: #ffdf80;
+  color: var(--primary-color);
+  border: 2px solid var(--secondary-color);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.contact form textarea {
+  grid-column: span 2;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px rgba(254, 200, 154, 0.8);
+}
+
+.contact form button {
+  grid-column: span 2;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact form button:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background-color: #E8E8E4;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 20px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px dashed var(--secondary-color);
+  outline-offset: 4px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .service-cards,
+  .team-members {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact form {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Styling for the "Why Now?" section */
+#why-now {
+  background-color: #f4e7d7;
+  color: black;
+  padding: 90px 50px;
+  text-align: center;
+}
+
+.why-now-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+#why-now h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+#why-now p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.why-now-example {
+  background-color: #3c2910;
+  padding: 50px;
+  border-radius: 32px;
+  margin-top: 60px;
+  text-align: left;
+}
+
+.why-now-example h3 {
+  font-size: 1.9rem;
+  margin-bottom: 40px;
+  color: #ffcc00;
+}
+
+/* Example Box Styling */
+.example-box {
+    background-color:  #ffb3b3; /* Change to your desired color */
+    padding: 100px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+.example-box:hover {
+    transform: scale(1.05); /* Slightly enlarge the box */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance the shadow */
+}
+
+.example-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.example-content img {
+    border-radius: 20px;
+    max-width: 800px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.example-text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.video {
+  background-color: var(--background-light); /* Use a light background color from your theme */
+  text-align: center;
+  padding: 50px 20px; /* Add padding for spacing */
+  border-radius: 15px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+
+.video h2 {
+  color: var(--primary-color); /* Use your primary color for the heading */
+  font-size: 2rem; /* Set a larger font size for the heading */
+  margin-bottom: 20px; /* Add space below the heading */
+}
+
+.video iframe {
+  width: 100%;
+  max-width: 800px; /* Limit the maximum width */
+  height: 450px; /* Set a fixed height */
+  border: none; /* Remove default border */
+  border-radius: 10px; /* Add rounded corners to the video */
+}
+
+.video p {
+  color: var(--primary-color); /* Use your primary color for the text */
+  margin-top: 20px; /* Add space above the text */
+  font-size: 1.1rem; /* Slightly increase the font size */
+}
+/* About Us Section */
+#about {
+    padding: 90px 40px;
+    text-align: center;
+}
+#about h2 {
+    font-size: 2.5rem; /* Increase the font size */
+    margin-bottom: 20px; /* Add space below the heading */
+    color: var(--primary-color); /* Optional: Set a specific color */
+}
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-box {
+    background-color:  	 #ffaa00; /* Change to your desired color */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.about-images img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text p, .about-text ul {
+    margin-bottom: 20px;
+}
+
+.about-text ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-text li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.about-text li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#about .about-content {
+    animation: fadeInUp 1s ease-in-out;
+}
+/* Slide-in Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.example-content {
+    animation: slideIn 0.3s ease-in-out;
+}
+.example-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-right: 50px; /* Add padding to accommodate the arrow */
+}
+
+.av-arrow {
+    position: absolute;
+    right: 10px; /* Position the arrow on the right side */
+    top: 80%; /* Center the arrow vertically */
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 20px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.av-arrow:hover {
+    background-color: var(--accent-color);
+}
