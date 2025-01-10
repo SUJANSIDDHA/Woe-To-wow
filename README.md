@@ -14,8 +14,7 @@ Healing Questionnaire: Receive tailored recommendations to guide your journey.
 Join & Support: Become part of a community that prioritizes well-being.
 Mission:
 We aim to empower individuals to overcome mental health challenges, fostering a space where healing is accessible and supported.
-![Website Preview](![screencapture-codepen-io-SUJAN-SIDDHA-full-emOyqwe-2025-01-09-06_03_40 (1)](https://github.com/user-attachments/assets/564912b3-dc61-466f-93a2-74193036546f)
-)
+
 
 Visit us today and take your first step toward a brighter tomorrow!
 ## This Are the images of our website
